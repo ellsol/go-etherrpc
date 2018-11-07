@@ -2,7 +2,7 @@ package rpc
 
 import (
 	"math/big"
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 )
 
 type SendTransaction struct {

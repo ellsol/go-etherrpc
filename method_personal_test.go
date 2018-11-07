@@ -2,7 +2,7 @@ package rpc
 
 import (
 	"testing"
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 )
 
 func TestPersonal_ListAccounts(t *testing.T) {

@@ -1,7 +1,7 @@
 package rpc
 
 import (
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 )
 
 const (
@@ -11,7 +11,7 @@ const (
 	MethodPersonalSignTransaction = "personal_signTransaction"
 	MethodUnlockAccount           = "personal_unlockAccount"
 	MethodPersonalSign            = "personal_sign"
-	MethodPersnalECRecover        = "personal_ecRecover"
+	MethodPersonalECRecover       = "personal_ecRecover"
 )
 
 type Personal struct {

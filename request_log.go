@@ -1,8 +1,8 @@
 package rpc
 
 import (
-	"github.com/ellsol/gox-ethertypes"
-	"github.com/ellsol/gox-ethertypes/converters"
+	"github.com/ellsol/go-ethertypes"
+	"github.com/ellsol/go-ethertypes/converters"
 )
 
 func (client *Client) RequestEtherLogList(method string, params ...interface{}) ([]ethertypes.EtherLog, error) {

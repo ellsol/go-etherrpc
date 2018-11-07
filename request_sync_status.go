@@ -3,7 +3,7 @@ package rpc
 import (
 	"fmt"
 	"encoding/json"
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 )
 
 type SyncStatus struct {

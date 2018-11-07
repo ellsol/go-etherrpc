@@ -2,7 +2,7 @@ package rpc
 
 import (
 	"github.com/ellsol/go-ethereum-rpc/rpcutils"
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 )
 
 type EthCallParams struct {

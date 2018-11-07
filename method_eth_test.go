@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"errors" 
 	"github.com/ellsol/gox/typex"
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 )
 
 type TestConfig struct {

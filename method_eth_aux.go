@@ -1,7 +1,7 @@
 package rpc
 
 import (
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 )
 
 func (eth Eth) GetLatestBalance(address string, quantity *ethertypes.Quantity) (*ethertypes.EtherValue, error) {

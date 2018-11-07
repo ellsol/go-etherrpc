@@ -3,7 +3,7 @@ package rpc
 import (
 	"fmt"
 	"github.com/ellsol/gox/typex"
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 )
 
 /*

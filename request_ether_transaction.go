@@ -2,9 +2,9 @@ package rpc
 
 import (
 	"fmt"
-	"github.com/ellsol/gox-ethertypes"
+	"github.com/ellsol/go-ethertypes"
 	"encoding/json"
-	"github.com/ellsol/gox-ethertypes/converters"
+	"github.com/ellsol/go-ethertypes/converters"
 )
 
 func (client *Client) RequestEtherTransaction(method string, params ...interface{}) (*ethertypes.EtherTransaction, error) {
@@ -46,5 +46,5 @@ func (client *Client) RequestEtherTransactionReceipt(method string, params ...in
 		return nil, err
 	}
 
-	return new(ethertypes.TransactionReceiptRaw).FromJSON(js)
+	return new(converters.TransactionReceiptRaw).FromJSON(js)
 }
