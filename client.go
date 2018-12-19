@@ -75,6 +75,7 @@ type Client struct {
 	Eth             Eth
 	Net             Net
 	Personal        Personal
+	Parity          Parity
 }
 
 // NewRPCClient returns a new ParityRPCClient instance with default configuration (no custom headers, default http.Client, autoincrement ids).
@@ -92,6 +93,7 @@ func NewRPCClient(endpoint string) *Client {
 	client.Eth = Eth{client: client}
 	client.Net = Net{client: client}
 	client.Personal = Personal{client: client}
+	client.Parity = Parity{client: client}
 
 	return client
 }
@@ -430,7 +432,7 @@ func checkRPCError(response *RPCResponse, err error) (*RPCResponse, error) {
 	return response, nil
 }
 
-func (it* RPCResponse) ToJSONBytes() ([]byte, error) {
+func (it *RPCResponse) ToJSONBytes() ([]byte, error) {
 	if it.Error != nil {
 		return nil, it.Error
 	}

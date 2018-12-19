@@ -1,7 +1,6 @@
 package rpc
 
 import (
-	"encoding/json"
 	"fmt"
 	"github.com/ellsol/go-ethertypes"
 	"github.com/ellsol/go-ethertypes/converters"
@@ -27,7 +26,7 @@ func (client *Client) RequestEtherBlock(method string, params ...interface{}) (*
 	}
 
 
-	js, err := json.Marshal(response)
+	js, err := response.ToJSONBytes()
 
 	if err != nil {
 		return nil, err

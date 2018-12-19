@@ -126,7 +126,10 @@ func (eth Eth) GasPrice() (*ethertypes.EtherValue, error) {
 /*
 	rpc method: "eth_getBalance"
 	Returns the balance of the account of given url.
+0x00a329c0648769a73afac7f9381e08fb43dbea72
+0x80dEF17bb76025EaBa069dE8D5eBfd8FbFc64D51
 	curl --data '{"method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1"],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
+curl --data '{"method":"eth_getBalance","params":["0x80dEF17bb76025EaBa069dE8D5eBfd8FbFc64D51"],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8545
 */
 func (eth Eth) GetBalance(address string, quantity *ethertypes.Quantity) (*ethertypes.EtherValue, error) {
 	return eth.client.RequestEtherValue(MethodGetBalance, address, quantity.HexStringOrTag())

@@ -18,5 +18,5 @@ func (client *Client) RequestEtherLogList(method string, params ...interface{}) 
 		return nil, err
 	}
 
-	converters.DecodeEtherLogList(js)
+	return converters.DecodeEtherLogList(js)
 }

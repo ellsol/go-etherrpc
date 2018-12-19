@@ -18,7 +18,7 @@ func (client *Client) RequestEtherTransaction(method string, params ...interface
 		return nil, fmt.Errorf("response returned without error but no transaction found for %v", params)
 	}
 
-	js, err := json.Marshal(response)
+	js, err := response.ToJSONBytes()
 
 	if err != nil {
 		return nil, err
@@ -46,5 +46,5 @@ func (client *Client) RequestEtherTransactionReceipt(method string, params ...in
 		return nil, err
 	}
 
-	return new(converters.TransactionReceiptRaw).FromJSON(js)
+	return converters.DecodeTransactionReceipt(js)
 }
