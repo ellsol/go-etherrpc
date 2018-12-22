@@ -1,7 +1,7 @@
 package rpc
 
 import (
-	"github.com/ellsol/go-ethereum-rpc/rpcutils"
+	"github.com/ellsol/go-etherrpc/rpcutils"
 	"github.com/ellsol/go-ethertypes"
 )
 

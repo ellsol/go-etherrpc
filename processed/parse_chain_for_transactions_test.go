@@ -1,9 +1,12 @@
 package processed
 
 import (
+	"github.com/ellsol/go-etherrpc"
 	"testing"
-	"github.com/ellsol/go-ethereum-rpc/rpc"
 )
+
+const InfuraEndpoint = "https://mainnet.infura.io/3l5dxBOP3wPspnRDdG1u"
+const RPCEndpointLocalHost = "http://localhost:8545"
 
 type TestConfig struct {
 	address string
@@ -15,13 +18,13 @@ func config() *TestConfig {
 
 func InfuraConfig() *TestConfig {
 	return &TestConfig{
-		address: rpc.InfuraEndpoint,
+		address: InfuraEndpoint,
 	}
 }
 
 func LocalhostConfig() *TestConfig {
 	return &TestConfig{
-		address: rpc.RPCEndpointLocalHost,
+		address: RPCEndpointLocalHost,
 	}
 }
 
