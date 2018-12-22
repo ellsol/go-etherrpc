@@ -1,6 +1,7 @@
 package rpc
 
 import (
+	"github.com/ellsol/go-ethertypes/converters"
 	"testing"
 	"math/big"
 	"errors" 
@@ -620,7 +621,7 @@ func HashToEtherTransactionFull(l []ethertypes.HexString) []ethertypes.EtherTran
 }
 
 func getTransactionReceipt_99192() *ethertypes.EtherTransactionReceipt {
-	logs := ethertypes.EtherLogRaw{
+	logs := converters.EtherLogRaw{
 		Address: "0x8d12a197cb00d4747a1fe03395095ce2a5cc6819",
 		Topics: []string{
 			"0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7",
@@ -634,7 +635,7 @@ func getTransactionReceipt_99192() *ethertypes.EtherTransactionReceipt {
 		Removed:          false,
 	}
 
-	raw := ethertypes.TransactionReceiptRaw{
+	raw := converters.TransactionReceiptRaw{
 		TransactionHash:   "0x99192da8574412d70d210b73d859904a0f3d1493051d751e4f32fb2905d1844a",
 		TransactionIndex:  "0x55",
 		BlockNumber:       "0x4fe363",
@@ -646,7 +647,7 @@ func getTransactionReceipt_99192() *ethertypes.EtherTransactionReceipt {
 		ContractAddress:   "",
 		Status:            "0x1",
 		LogsBloom:         "0x00000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000040008000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-		Logs:              []ethertypes.EtherLogRaw{logs},
+		Logs:              []converters.EtherLogRaw{logs},
 	}
 
 	log, _ := raw.ToEtherTransactionReceipt()
